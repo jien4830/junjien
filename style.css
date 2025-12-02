@@ -16,15 +16,16 @@ body {
 
 /* ==========================================================
    HEADER CARD
-   ========================================================== */
+========================================================== */
 .header-card {
-    background: #FF9E57;
+    background: linear-gradient(90deg, #A96CFF, #5BCFFD);
     padding: 25px 40px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px; /* <-- added so name sits properly beside image */
+    gap: 25px;
+    box-shadow: 0 0 12px #5BCFFD;
 }
 
 /* Profile Image */
@@ -75,14 +76,15 @@ body {
 }
 
 .nav-links a:hover {
-    opacity: 0.6;
+    color: #1F1F1F;
+    opacity: 0.65;
 }
 
 
 
 /* ==========================================================
    SECTIONS
-   ========================================================== */
+========================================================== */
 .section {
     padding: 70px 0;
     max-width: 1050px;
@@ -92,7 +94,7 @@ body {
 
 .section h2 {
     font-size: 35px;
-    color: #FF9E57;
+    color: #A96CFF;
 }
 
 /* About Me paragraph */
@@ -108,7 +110,7 @@ body {
 
 /* ==========================================================
    SKILL CARDS — wider
-   ========================================================== */
+========================================================== */
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -120,21 +122,23 @@ body {
     background: #2A2A2A;
     padding: 28px;
     border-radius: 14px;
-    border: 2px solid #6EC1E4;
+    border: 2px solid #5BCFFD;
     font-size: 20px;
     transition: 0.25s;
+    box-shadow: 0 0 12px rgba(91, 207, 253, 0.2);
 }
 
 .skill-card:hover {
     transform: scale(1.06);
-    border-color: #F06292;
+    border-color: #A96CFF;
+    box-shadow: 0 0 16px #A96CFF;
 }
 
 
 
 /* ==========================================================
    SOFTWARE CARDS
-   ========================================================== */
+========================================================== */
 .software-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -146,12 +150,13 @@ body {
     background: #2A2A2A;
     padding: 32px;
     border-radius: 14px;
-    border-left: 6px solid #FF9E57;
+    border-left: 6px solid #5BCFFD;
     text-align: left;
     font-size: 18px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: 0 0 10px rgba(91, 207, 253, 0.25);
 }
 
 .soft-icon {
@@ -164,7 +169,7 @@ body {
 
 /* ==========================================================
    CONTACT SECTION
-   ========================================================== */
+========================================================== */
 .contact-grid {
     margin-top: 40px;
     display: grid;
@@ -178,19 +183,20 @@ body {
 }
 
 .contact-grid a {
-    color: #6EC1E4;
+    color: #5BCFFD;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .contact-grid a:hover {
-    color: #F06292;
+    color: #A96CFF;
 }
 
 
 
 /* ==========================================================
    PROJECT PAGE
-   ========================================================== */
+========================================================== */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -202,13 +208,14 @@ body {
     background: #2A2A2A;
     padding: 30px;
     border-radius: 14px;
-    border-left: 6px solid #FF9E57;
+    border-left: 6px solid #A96CFF;
     text-align: left;
+    box-shadow: 0 0 12px rgba(169, 108, 255, 0.25);
 }
 
 .project-box h3 {
     margin: 0 0 10px;
-    color: #FF9E57;
+    color: #A96CFF;
     font-size: 20px;
 }
 
@@ -220,7 +227,7 @@ body {
 .view-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #FF9E57;
+    background: linear-gradient(90deg, #A96CFF, #5BCFFD);
     color: #1F1F1F;
     border-radius: 8px;
     text-decoration: none;
@@ -228,12 +235,14 @@ body {
 }
 
 .view-btn:hover {
-    opacity: 0.7;
+    filter: brightness(1.15);
 }
+
+
 
 /* ==========================================================
    PROJECT IMAGE BOXES (UNIFORM SIZE)
-   ========================================================== */
+========================================================== */
 .project-image-section {
     margin-top: 35px;
     display: grid;
@@ -241,29 +250,17 @@ body {
     gap: 25px;
 }
 
-/* Each image is inside a clean rounded box */
 .proj-box {
-    background: #2A2A2A;
-    padding: 18px;
-    border-radius: 12px;
-    border: 2px solid #FF9E57;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.proj-box {
-    background: #1d1d1d;
-    border: 2px solid #FF9E57;
+    background: #242424;
+    border: 2px solid #A96CFF;
     padding: 15px;
     border-radius: 12px;
-    width: 340px;               /* bigger box */
-    height: auto;               /* auto height so text fits */
+    width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     margin: 15px;
+    box-shadow: 0 0 10px rgba(169, 108, 255, 0.25);
 }
 
 .proj-img {
@@ -281,14 +278,13 @@ body {
 
 /* ========== ONLY FOR PROJECT 1 PAGE ========== */
 .proj-small {
-    width: 250px !important;     /* smaller box */
+    width: 250px !important;
     padding: 12px !important;
     margin: 12px auto !important;
 }
 
 .proj-small .proj-img {
     width: 100%;
-    height: auto;
 }
 
 .proj-small .img-label {
@@ -296,7 +292,6 @@ body {
     margin-top: 8px;
 }
 
-/* Project Image Grid */
 .project-image-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -308,7 +303,7 @@ body {
 .proj-box {
     width: 240px;
     background: #242424;
-    border: 2px solid #FF9E57;
+    border: 2px solid #A96CFF;
     border-radius: 12px;
     padding: 14px;
     text-align: center;
@@ -333,16 +328,17 @@ body {
 /* ===== ONLY FOR PROJECT 2 (4 centered boxes, 2 rows) ===== */
 .project2-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);   /* 2 on top, 2 at bottom */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    justify-items: center;                   /* center horizontally */
+    justify-items: center;
     margin-top: 35px;
 }
+
+
+
 /* =============================
    PROJECT 1 — FIXED LAYOUTS
-   ============================= */
-
-/* 3 UP, 2 DOWN for UI section */
+============================= */
 .project1-ui-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -355,7 +351,6 @@ body {
     width: 240px;
 }
 
-/* 2 UP, 2 DOWN for Cutscene section */
 .project1-cutscene-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
